@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "node-main",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 200,
+      "text": "# CanvasTUI Demo\n\nThis is a sample canvas file demonstrating the JSON Canvas format.\n\n## Features\n- View canvas files in terminal\n- Navigate between nodes\n- Search content\n- Export to various formats",
+      "color": "1"
+    },
+    {
+      "id": "node-features",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 280,
+      "height": 180,
+      "text": "## Key Features\n\n📝 Text nodes support markdown\n📄 File references\n🔗 Links to external URLs\n📦 Group nodes for organization",
+      "color": "2"
+    },
+    {
+      "id": "node-install",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 250,
+      "height": 150,
+      "text": "## Installation\n\n```\npip install canvastui\n```\n\nOr with pipx:\n```\npipx install canvastui\n```"
+    },
+    {
+      "id": "node-usage",
+      "type": "text",
+      "x": 300,
+      "y": 300,
+      "width": 300,
+      "height": 150,
+      "text": "## Usage\n\n```bash\n# Open a canvas file\ncanvastui open my-canvas.canvas\n\n# Show info\ncanvastui info my-canvas.canvas\n\n# Search nodes\ncanvastui search my-canvas.canvas \"keyword\"\n```"
+    },
+    {
+      "id": "node-export",
+      "type": "text",
+      "x": 650,
+      "y": 300,
+      "width": 250,
+      "height": 120,
+      "text": "## Export Options\n\n- JSON (default)\n- Markdown\n- Mermaid diagrams"
+    },
+    {
+      "id": "node-link",
+      "type": "link",
+      "x": 750,
+      "y": 0,
+      "width": 200,
+      "height": 100,
+      "url": "https://github.com/gitstq/CanvasTUI"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "node-main",
+      "fromSide": "right",
+      "toNode": "node-features",
+      "toSide": "left",
+      "label": "features"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "node-main",
+      "fromSide": "bottom",
+      "toNode": "node-install",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "node-install",
+      "fromSide": "right",
+      "toNode": "node-usage",
+      "toSide": "left",
+      "label": "then"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "node-usage",
+      "fromSide": "right",
+      "toNode": "node-export",
+      "toSide": "left"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "node-features",
+      "fromSide": "right",
+      "toNode": "node-link",
+      "toSide": "left",
+      "label": "repo"
+    }
+  ]
+}

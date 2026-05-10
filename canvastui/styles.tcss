@@ -1,0 +1,197 @@
+/* CanvasTUI Styles */
+
+/* Main Layout */
+Screen {
+    background: $surface;
+}
+
+#main-container {
+    layout: vertical;
+    height: 100%;
+}
+
+#content-area {
+    layout: horizontal;
+    height: 1fr;
+}
+
+/* Panels */
+#left-panel {
+    width: 25%;
+    min-width: 20;
+    max-width: 40;
+    border-right: solid $primary;
+    background: $surface-darken-1;
+}
+
+#center-panel {
+    width: 1fr;
+    background: $surface;
+}
+
+#right-panel {
+    width: 30%;
+    min-width: 25;
+    max-width: 50;
+    border-left: solid $primary;
+    background: $surface-darken-1;
+}
+
+/* Headers */
+#nodes-header,
+#canvas-header,
+#detail-header {
+    text-align: center;
+    text-style: bold;
+    color: $primary;
+    padding: 1;
+    border-bottom: solid $primary;
+}
+
+/* Node List */
+#node-list {
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#node-list-view {
+    height: 1fr;
+}
+
+.node-item {
+    padding: 1 2;
+}
+
+.node-item:hover {
+    background: $surface-lighten-1;
+}
+
+.node-item:focus {
+    background: $primary-darken-2;
+}
+
+.node-text {
+    color: $text;
+}
+
+.node-file {
+    color: $warning;
+}
+
+.node-link {
+    color: $success;
+}
+
+.node-group {
+    color: $accent;
+}
+
+/* Canvas View */
+#canvas-view {
+    height: 1fr;
+    overflow: auto;
+}
+
+#canvas-render {
+    height: 1fr;
+    padding: 1;
+}
+
+/* Node Detail */
+#node-detail {
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#detail-content {
+    height: 1fr;
+    padding: 1;
+}
+
+/* Search Widget */
+#search-widget {
+    dock: top;
+    height: auto;
+    background: $surface-darken-2;
+    border-bottom: solid $primary;
+    display: none;
+}
+
+#search-container {
+    height: 3;
+    align: center middle;
+    padding: 1;
+}
+
+#search-icon {
+    width: 3;
+    text-align: center;
+    color: $primary;
+}
+
+#search-input {
+    width: 1fr;
+}
+
+/* Footer */
+Footer {
+    background: $surface-darken-2;
+    color: $text;
+}
+
+/* Header */
+Header {
+    background: $primary-darken-3;
+    color: $text;
+}
+
+/* Scrollbar */
+ScrollBar {
+    background: $surface-darken-1;
+    color: $primary;
+}
+
+ScrollBar:hover {
+    color: $primary-lighten-1;
+}
+
+/* Notifications */
+Notification {
+    background: $primary;
+    color: $text;
+}
+
+/* Buttons */
+Button {
+    margin: 1;
+}
+
+Button:focus {
+    text-style: bold;
+}
+
+/* Labels */
+Label {
+    padding: 0 1;
+}
+
+/* Lists */
+ListView {
+    background: transparent;
+}
+
+ListItem {
+    padding: 0 1;
+}
+
+ListItem:focus {
+    background: $primary-darken-2;
+}
+
+ListItem:hover {
+    background: $surface-lighten-1;
+}
+
+ListItem.-active {
+    background: $primary-darken-1;
+}

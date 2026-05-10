@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canvastui"
+version = "1.0.0"
+description = "A powerful terminal-based JSON Canvas (.canvas) viewer and editor"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "gitstq", email = "gitstq@users.noreply.github.com"}
+]
+keywords = [
+    "canvas", "obsidian", "tui", "terminal", "json-canvas", 
+    "viewer", "editor", "cli", "mind-map", "knowledge-graph"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+    "Topic :: Text Editors",
+    "Typing :: Typed",
+]
+dependencies = [
+    "textual>=0.47.0",
+    "rich>=13.7.0",
+    "pydantic>=2.5.0",
+    "click>=8.1.0",
+    "watchdog>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.7.0",
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+]
+
+[project.scripts]
+canvastui = "canvastui.cli:main"
+canvas = "canvastui.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/CanvasTUI"
+Documentation = "https://github.com/gitstq/CanvasTUI#readme"
+Repository = "https://github.com/gitstq/CanvasTUI"
+Issues = "https://github.com/gitstq/CanvasTUI/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["canvastui*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
